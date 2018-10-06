@@ -22,5 +22,12 @@ function palindrome(str) {
     }
 }
 
-palindrome("eye");
-console.log(palindrome("eye")); // should return true
+palindrome("tacocat");
+console.log(palindrome("tacocat")); // should return true
+
+//other test cases 
+// ("race car") should return true
+// ("A man, a plan, a canal. Panama") should return true
+// ("not a palindrome") should return false
+// ("never odd or even") should return true
+// ("nope") should return false
