@@ -61,3 +61,24 @@ function Palindrome(str) {
     // This one line is now equivalent to what we had in our if statement before.
     return str === str2;
 }
+
+// There is one more thing we can do and that is taking these three lines and convert them into a single line
+var str2 = str.split('');
+str2.reverse();
+str2 = str2.split('');
+
+// The above now becomes this: 
+var str2 = str.split('').reverse().join(''); 
+// Instead we now have string2 in 1 line where I've converted to an array
+// I've used the built in reverse function that's built into an array to reverse it, then we can join it back together
+// I've converted it back to a string so now string2 is an exact reverse
+// Now I can compare it between the two of them
+
+// FINAL CODE REFACTORED SHOULD LOOK LIKE THIS: 
+// Explain your thought process out loud as your refactoring so the interview can follow along. 
+// Explain how having it on one line is easier to follow/understand. 
+function Palindrome(str) {
+    var str2 = str.split('').reverse().join('');
+
+    return str === str2;
+}
