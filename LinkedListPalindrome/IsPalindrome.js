@@ -82,3 +82,20 @@ function Palindrome(str) {
 
     return str === str2;
 }
+
+// ASK YOUR INTERVIEWER SOME FOLLOW UP QUESTIONS REGARDING SOME ISSUES THIS FUNCTION MAY HAVE: 
+// 1. Do I need to worry about upper and lower case?
+//      Example: Pop with a capital P is the first letter, but technically not a Palindrome if you worry about 
+//               upper/lower case as upper/lower cases are not equivalent. In that case the above function would fail. 
+
+// Let's go over how we can fix our code to take this into consideration: 
+// We can convert it to lowercase (or upper) by adding the following directly under the first line of your function. 
+
+
+// NEW CODE TO LOOK LIKE THIS: 
+function Palindrome(str) {
+    str.toLowerCase();
+    var str2 = str.split('').reverse().join('');
+
+    return str === str2;
+}
