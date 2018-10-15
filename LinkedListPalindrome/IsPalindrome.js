@@ -99,3 +99,16 @@ function Palindrome(str) {
 
     return str === str2;
 }
+
+// OTHER QUESTIONS TO ASK YOUR INTERVIEWER:
+// 1. What do I do if what I'm passed in is an empty string?
+//    Do I need to return true or false for an empty string?
+//    If the answer is yes you would need to add in a line in the 
+//    very beginning that would check to test if your string is a string or not 
+ 
+// 2. What do I need to do if this string isn't a string?
+// Example: if 1 2 3 is passed in, that is not a string
+
+// 3. Do we need to account for punctuation such as spaces, comma's, periods, exclamation marks etc? 
+//    If the answer is yes, we can add a line to the beginning by using a Regex expression that takes all punctuation marks
+//    and removes them from the string
