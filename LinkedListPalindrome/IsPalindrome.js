@@ -47,3 +47,17 @@ function Palindrome(str) {
         return false;
     }
 }
+
+// This successfully shows off how to check if a string is a Palindrome, but there is a few things we can do to make it even better! 
+// So let's refactor!
+
+// ALTERNATIVE SOLUTION: 
+function Palindrome(str) {
+    var str2 = str.split('');
+    str2.reverse();
+    str2 = str2.split('');
+
+    // Remove your if statement from above and refactor so it returns whether or not string is equal to string2.
+    // This one line is now equivalent to what we had in our if statement before.
+    return str === str2;
+}
