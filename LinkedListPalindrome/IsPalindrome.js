@@ -36,3 +36,14 @@ function Palindrome(str) {
     // all into a single string with nothing to separate them out. 
     // So now string2 is now an exact reverse of string. 
     str2 = str2.split('');
+
+    // Now what we need to do is compare these and return them.
+    // To do that we can check to see if string is equal to string2 by creating an if statement.
+    if (str === str2) {
+        // if it's the same, return True
+        return true;
+        // else, return False
+    } else {
+        return false;
+    }
+}
