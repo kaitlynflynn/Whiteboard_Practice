@@ -15,3 +15,24 @@
 // Now you need to figure out how you can get your string and convert it into an array.
 // The string method natively has a method on it that's called split - a split will convert a string 
 // into an array so this will be your first step in writing your function below.
+
+// *** NOW TIME TO WHITEBOARD ***
+
+// I'm going to start off by creating a function and call it 'Palindrome'. 
+// It is going to take in 1 parameter which is a string. 
+function Palindrome(str) {
+    // Now I'm going to create a new variable called string2. 
+    // Then I'm going to set it equal to string.split.
+    // NOTE: Split method requires you to put in a parameter into the method that tells it on what it 
+    //       is going to be splitting in the actual string itself. Here we are using 'quote quote' which 
+    //       basically means after every single letter in the string, it's going to split it out into an 
+    //       individual element into the array.
+    var str2 = str.split('');
+    // Now I can reverse it by taking string2.reverse.
+    str2.reverse();
+    // NOTE: Now we need to figure out what we need to do to convert it from an array back into a string.
+    //       There is a method that's called 'join' that will convert it back into a string.
+    // Here we use the split method with the same 'quote quote' which basically says I'm just going to convert it 
+    // all into a single string with nothing to separate them out. 
+    // So now string2 is now an exact reverse of string. 
+    str2 = str2.split('');
