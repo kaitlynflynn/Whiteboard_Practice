@@ -10,9 +10,15 @@
 
 function palindrome(str) {
     str = str.toLowerCase(); // will convert string to lowercase
-    var symbols = /\W+|_/g; // create symbols variable to hold all symbols
+    var symbols = /[\W_]/g; // create symbols variable to hold all symbols
+    // \W removes all non-alphanumeric characters: 
+    //     \W matches any non-word character
+    //     \W is equilvalent to [^A-Za-z0-9_]
+    //     \W matches anything that is not enclosed in the brackets
+    //     g flag stands for global search
+
     str = str.replace(symbols, ""); // take the string and replace symbols with no spaces
-    var newString = str.split("").reverse().join(""); // newString variable takes original string and splits it into array, reverses it and then join it back together into a string with no symbols & all lowercase
+    var newString = str.split("").reverse().join(""); // newString variable takes original string and splits it into an array, reverses it and then join it back together into a string with no symbols & all lowercase
 
     if (newString === str) { // compares these and if they're the same, returns true
      return true;   
