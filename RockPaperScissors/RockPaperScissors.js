@@ -22,5 +22,9 @@ function rockPaperScissors(n) {
         // move toward the base case by adding the next play
         // and recursively calling this function by decrementing
         // the 'roundsLeft' argument 
+        plays.forEach((play) => {
+            findOutcome(roundsLeft - 1, result.concat(play));
+        });
     }
+    
 }
