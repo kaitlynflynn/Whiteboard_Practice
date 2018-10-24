@@ -8,3 +8,6 @@
 // So your output should be an array of arrays, where the length of each inner array is n.
 
 //Solution here: 
+function rockPaperScissors(n) {
+    
+}
