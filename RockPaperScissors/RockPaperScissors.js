@@ -26,5 +26,7 @@ function rockPaperScissors(n) {
             findOutcome(roundsLeft - 1, result.concat(play));
         });
     }
-    
+    // Be sure to make the initial call
+    findOutcome(n, []);
+    return outcomes;
 }
