@@ -14,6 +14,13 @@ function rockPaperScissors(n) {
     const plays = ['rock', 'paper', 'scissors'];
     // inner recursive helper function
     function findOutcome (roundsLeft, result) {
-        
+        // base case
+        if (roundsLeft === 0) {
+            outcomes.push(result);
+            return;
+        }
+        // move toward the base case by adding the next play
+        // and recursively calling this function by decrementing
+        // the 'roundsLeft' argument 
     }
 }
