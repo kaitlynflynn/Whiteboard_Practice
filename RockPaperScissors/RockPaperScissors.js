@@ -9,5 +9,7 @@
 
 //Solution here: 
 function rockPaperScissors(n) {
-    
+    // outcomes array is the outer array that will hold all of the smaller arrays
+    const outcomes = [];
+    const plays = ['rock', 'paper', 'scissors'];
 }
