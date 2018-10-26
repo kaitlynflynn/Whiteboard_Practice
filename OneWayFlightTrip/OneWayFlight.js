@@ -43,3 +43,25 @@ function reconstructTrip(tickets) {
     return route;
 }
 
+// Console.log tests
+const shorterSet = [
+    [null, 'PDX'],
+    ['PDX', 'DCA'],
+    ['DCA', null],
+];
+
+const longerSet = [
+    ['PIT', 'ORD'],
+    ['XNA', 'CID'],
+    ['SFO', 'BHM'],
+    ['FLG', 'XNA'],
+    [null, 'LAX'], 
+    ['LAX', 'SFO'],
+    ['CID', 'SLC'],
+    ['ORD', null],
+    ['SLC', 'PIT'],
+    ['BHM', 'FLG'],
+  ]
+  
+console.log(reconstructTrip(shorterSet)); // should print [ 'PDX', 'DCA' ]
+console.log(reconstructTrip(longerSet));  // should print [ 'LAX', 'SFO', 'BHM', 'FLG', 'XNA', 'CID', 'SLC', 'PIT', 'ORD' ]
