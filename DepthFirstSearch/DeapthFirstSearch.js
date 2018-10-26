@@ -33,3 +33,17 @@
 // your `depthFirstForEach` function should start at the root node and print out, in this order, 6, 10, 9, 18, 89.
 
 // WHITEBOARD YOUR CODE HERE:
+
+// Recursive implementation: 
+function recursiveDepthFirstForEach(node, cb) {
+    cb(node.value);
+
+    if (node.left) {
+        recursiveDepthFirstForEach(node.left, cb);
+    }
+
+    if (node.right) {
+        recursiveDepthFirstForEach(node.right, cb);
+    }
+}
+
