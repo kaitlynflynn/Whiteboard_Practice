@@ -86,3 +86,24 @@ class BinaryTreeNode {
     }
 }
 
+// Some console.log tests
+const root = new BinaryTreeNode(6);
+root.insertLeft(10);
+root.insertRight(18);
+root.left.insertLeft(9);
+root.right.insertRight(89);
+
+const cb = (x) => console.log(x);
+
+recursiveDepthFirstForEach(root, cb); // should print 6 10 9 18 89
+console.log();
+iterativeDepthFirstForEach(root, cb); // should print 6 10 9 18 89
+console.log();
+
+root.left.insertRight(15);
+root.right.insertLeft(0);
+
+recursiveDepthFirstForEach(root, cb); // should print 6 10 9 15 18 0 89
+console.log();
+iterativeDepthFirstForEach(root, cb); // should print 6 10 9 15 18 0 89
+console.log();
