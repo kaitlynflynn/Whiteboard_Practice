@@ -22,3 +22,19 @@
 // }
 
 //WHITEBOARD YOUR ANSWER HERE: 
+function makeBoard(n) {
+    let board = [];
+    for (let i = 0; i < n; i++) {
+      board.push([]);
+      for (let j = 0; j < n; j++) {
+        board[i].push(false);
+      }
+    }
+    board.toggle = (i, j) => {
+      board[i][j] = !board[i][j];
+    };
+    board.hasBeenVisited = (i, j) => {
+      return board[i][j];
+    };
+    return board;
+  }
