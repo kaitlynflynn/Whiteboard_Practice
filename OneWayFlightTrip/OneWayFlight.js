@@ -2,3 +2,19 @@
 
 // Write a function reconstructTrip to reconstruct your trip from your mass of flight tickets. Each ticket is a two-element array with the source airport as the first element and the destination airport as the second element. The ticket for your first flight has a destination but no source, and the ticket for your final flight has a source, but no destination.
 
+// An example input might look like this:
+// const tickets = [
+//     ['PIT', 'ORD'],
+//     ['XNA', 'CID'],
+//     ['SFO', 'BHM'],
+//     ['FLG', 'XNA'],
+//     [null, 'LAX'], 
+//     ['LAX', 'SFO'],
+//     ['CID', 'SLC'],
+//     ['ORD', null],
+//     ['SLC', 'PIT'],
+//     ['BHM', 'FLG'],
+//   ];
+
+// Your function should output an array with the route of your trip. For the above example, it should look like this:
+// ['LAX', 'SFO', 'BHM', 'FLG', 'XNA', 'CID', 'SLC', 'PIT', 'ORD']
