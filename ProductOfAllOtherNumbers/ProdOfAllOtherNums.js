@@ -39,3 +39,12 @@ function getProductOfAllIntsExceptAtIndex(intArray) {
 
     return productsOfAllIntsExceptAtIndex;
 };
+
+// Console.log tests: 
+console.log(getProductOfAllIntsExceptAtIndex(
+    [1, 2, 3, 4, 5]
+)); // should print [120, 60, 40, 30, 24]
+
+console.log(getProductOfAllIntsExceptAtIndex(
+    [9, 90]
+)); // should print [90, 9]
