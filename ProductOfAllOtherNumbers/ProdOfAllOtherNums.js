@@ -12,3 +12,12 @@
 // If your interviewee comes up with a solution that utilizes division, that's fine. Once they get through that, challenge them to then come up with a solution that doesn't utilize division!
 
 //WHITEBOARD YOUR ANSWER HERE: 
+
+// How would you solve this problem if division were allowed? 
+function getProductOfAllIntsExceptAtIndex(intArray) {
+    if (intArray.length < 2) {
+        throw new Error('Getting the product of numbers at other indicies requires at least 2 numbers');
+    }
+
+    
+}
