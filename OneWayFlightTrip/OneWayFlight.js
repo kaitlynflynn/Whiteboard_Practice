@@ -65,3 +65,5 @@ const longerSet = [
   
 console.log(reconstructTrip(shorterSet)); // should print [ 'PDX', 'DCA' ]
 console.log(reconstructTrip(longerSet));  // should print [ 'LAX', 'SFO', 'BHM', 'FLG', 'XNA', 'CID', 'SLC', 'PIT', 'ORD' ]
+
+// This has a O(2n) time complexity with O(2n) space complexity 
