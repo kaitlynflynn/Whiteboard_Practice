@@ -74,5 +74,21 @@ class SetOfStacks {
         return this.stacks[index].pop();
     }
 
-    
+    // A `popAt` implementation that exhibits the roll over behavior 
+    popAtWithRollOver(index) {
+        return _shiftStacks(index);
+    }
+
+    _shiftStack(index) {
+        const rv = this.stacks[index].shift();
+
+        if (this.stacks[index].length === 0) {
+            this.stacks.splice(index, 1);
+        } else if (this.stacks.length > index + 1) {
+            const v = this._shiftStacks(index + 1);
+            this.stacks[index].push(v);
+        }
+
+        return rv;
+    }
 }
