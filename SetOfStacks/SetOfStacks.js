@@ -24,3 +24,16 @@
 
 //WHITEBOARD YOUR SOLUTION HERE: 
 
+class SetOfStacks {
+    constructor(capacity) {
+        this.capacity = capacity;
+        this.stacks = [[]];
+        this.currentStackIndex = 0;
+    }
+
+    get length() {
+        return this.currentStackIndex + 1;
+    }
+
+    
+}
