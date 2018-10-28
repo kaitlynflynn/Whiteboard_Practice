@@ -43,3 +43,22 @@
 
 // WHITEBOARD YOUR SOLUTION HERE: 
 
+// s is an input for Stack
+function sortStack(s) {
+    // initialize an output stack that will hold all the sorted elements
+    const r = new Stack();
+    // We're going to keep sorting until the input stack is completely empty
+    while (!s.isEmpty()) {
+        const temp = s.pop();
+        // while our output stack still has elements, and the top element is larger than the value in the temp variable
+        while (!r.isEmpty() && r.peek() > temp) {
+            // pop off our output stack back into the input stack
+            s.push(r.pop());
+        }
+
+        r.push(temp);
+    }
+
+    return r;
+}
+
