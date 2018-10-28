@@ -87,3 +87,23 @@ class Stack {
         this.storage.forEach(elem => console.log(elem));
     }
 }
+
+// Console log tests: 
+
+const s = new Stack(); 
+s.push(10);
+s.push(4);
+
+let sortedStack = sortStack(s); // sortedStack is also a Stack instance
+sortedStack.printContents(); // should print 4, 10
+console.log();
+
+s.push(8);
+s.push(5);
+s.push(1);
+s.push(6);
+s.push(19);
+s.push(4);
+
+sortedStack = sortStack(s);
+sortedStack.printContents(); // should print 1, 4, 5, 6, 8, 19
