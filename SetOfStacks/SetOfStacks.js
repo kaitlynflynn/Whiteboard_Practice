@@ -35,5 +35,16 @@ class SetOfStacks {
         return this.currentStackIndex + 1;
     }
 
-    
+    push(item) {
+        // check to see if the current stack has room
+        if (this.stacks[this.currentStackIndex].length < this.capacity) {
+            this.stacks[this.currentStackIndex].push(item);
+        } else {
+            // current stack has reached the capacity
+            // add a new stack to the set of stacks and push onto the new stack
+            this.stacks.push([]);
+            this.currentStackIndex++;
+            this.stacks[this.currentStackIndex].push(item);
+        }
+    }
 }
