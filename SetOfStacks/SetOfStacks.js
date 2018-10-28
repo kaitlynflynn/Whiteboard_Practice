@@ -47,4 +47,32 @@ class SetOfStacks {
             this.stacks[this.currentStackIndex].push(item);
         }
     }
+
+    pop() {
+        // check to see if the current stack is empty
+        if (this.stacks[this.currentStackIndex].length === 0) {
+            this.currentStackIndex--;
+        }
+        return this.stacks[this.currentStackIndex].pop();
+    }
+
+    // There are a couple of ways this `popAt` function could be implemented
+    // We could simply pop from the stack at the given index and call it a day
+    // However, this might lead to tricky situations later on if someone
+    // assumes that all stacks other than the last one operate at full capacity.
+
+    // The alternative is to pop from the stack at the given index, and then 
+    // roll over an item from the next stack, which would get us into a chain
+    // reaction of having to roll over an item from every stack to the previous
+    // stack until we reach the last stack. 
+
+    // There are signicant time complexity tradeoffs between these two approaches
+    // Be sure to discuss these tradeoffs with your interviewee.
+
+    // Simple `popAt` implementation with no roll over
+    popAt(index) {
+        return this.stacks[index].pop();
+    }
+
+    
 }
