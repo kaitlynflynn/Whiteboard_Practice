@@ -30,3 +30,27 @@ class TempTracker {
       this.minTemp = null;
       this.maxTemp = null;
   }
+
+  insert(temp) {
+    // for mode
+    // increment the number of times this temp as appeared
+    this.occurrences[temp]++;
+    // update our maxOccurences and mode variables if necessary
+    if (this.occurrences[temp] > this.maxOccurrences) {
+      this.mode = temp;
+      this.maxOccurrences = this.occurrences[temp];
+    }
+
+    // for mean
+    this.numberOfReadings++;
+    this.totalSum += temp;
+    this.mean = this.totalSum / this.numberOfReadings;
+
+    // for min and max
+    if (this.maxTemp === null || temp > this.maxTemp) {
+      this.maxTemp = temp;
+    }
+    if (this.minTemp === null || temp < this.minTemp) {
+        this.minTemp = temp;
+    }
+  }
