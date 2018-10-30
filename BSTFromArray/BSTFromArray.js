@@ -71,3 +71,15 @@ function maxDepth(node) {
     return 1 + Math.max(maxDepth(node.left), maxDepth(node.right));
   }
   
+  /* Some console.log tests */
+let sortedArray = [1, 2, 3, 4, 5, 6, 7];
+let bst = createMinimalBST(sortedArray);
+
+console.log(isBinarySearchTree(bst));   // should print true
+console.log(maxDepth(bst));             // should print 3
+
+sortedArray = [4, 10, 11, 18, 42, 43, 47, 49, 55, 67, 79, 89, 90, 95, 98, 100];
+bst = createMinimalBST(sortedArray);
+
+console.log(isBinarySearchTree(bst));   // should print true
+console.log(maxDepth(bst));             // should print 5
