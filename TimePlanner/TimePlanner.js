@@ -23,3 +23,10 @@
 // These example inputs are obviously not realistic input numbers for representing meeting times. Ideally the inputs would consist of Unix epoch timestamps, but those are very large numbers to have to type out over and over again, so we're just going to fake that part. If your function works with these faux inputs, it will work just fine with Unix timestamps.
 
 // WHITEBOARD YOUR APPROACH HERE: 
+function timePlanner(a, b, duration) {
+    let aCount = 0;
+    let bCount = 0;
+  
+    while (aCount < a.length && bCount < b.length) {
+      const start = Math.max(a[aCount][0], b[bCount][0]);
+      const end = Math.min(a[aCount][1], b[bCount][1]);
