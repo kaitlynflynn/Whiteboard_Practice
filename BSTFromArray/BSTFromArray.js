@@ -64,3 +64,10 @@ function isBinarySearchTree(root) {
     }
     return true;
   }
+
+  /* Helper function to check the max height of a BST */
+function maxDepth(node) {
+    if (!node) return 0;
+    return 1 + Math.max(maxDepth(node.left), maxDepth(node.right));
+  }
+  
