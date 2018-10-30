@@ -12,3 +12,11 @@
 // If there is more than one mode, return any of the modes.
 
 // WHITEBOARD YOUR APPROACH HERE: 
+class TempTracker {
+    constructor() {
+      // for mode
+      // populate occurrences array with 0s from 0 to 140
+      // 140 being the max temperature 
+      this.occurrences = Array(140).fill(0);
+      this.maxOccurrences = 0;
+      this.mode = null;
