@@ -21,3 +21,23 @@
 // write a function that checks to see if a given binary tree is perfectly balanced, meaning all leaf nodes are located at the same depth. Your function should return true if the tree is perfectly balanced and false otherwise.
 
 //WHITEBOARD YOUR APPROACH HERE: 
+/* 
+  A recursive solution
+  How would you solve this iteratively?
+ */
+const checkBalanced = (rootNode) => {
+    // An empty tree is balanced by default
+    if (!rootNode) return true;
+    // recursive helper function to check the min depth of the tree
+    const minDepth = (node) => {
+      if (!node) return 0;
+      return 1 + Math.min(minDepth(node.left), minDepth(node.right));
+    };
+    // recursive helper function to check the max depth of the tree
+    const maxDepth = (node) => {
+      if (!node) return 0;
+      return 1 + Math.max(maxDepth(node.left), maxDepth(node.right));
+    }
+    
+    return (maxDepth(rootNode) - minDepth(rootNode) === 0);
+  };
