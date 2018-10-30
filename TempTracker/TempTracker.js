@@ -20,3 +20,13 @@ class TempTracker {
       this.occurrences = Array(140).fill(0);
       this.maxOccurrences = 0;
       this.mode = null;
+
+      // for mean
+      this.numberOfReadings = 0;
+      this.totalSum = 0;
+      this.mean = null;
+
+      // for min and max
+      this.minTemp = null;
+      this.maxTemp = null;
+  }
