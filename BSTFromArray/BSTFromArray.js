@@ -42,3 +42,25 @@ function createMinimalBST(sortedArray) {
       this.right = null;
     }
   }
+
+  /* Helper function to validate that the created tree is a valid BST */
+function isBinarySearchTree(root) {
+    const nodeAndBoundsStack = [];
+    nodeAndBoundsStack.push({node: root, lowerBound: -Infinity, upperBound: Infinity});
+    while (nodeAndBoundsStack.length) {
+      const nodeAndBounds = nodeAndBoundsStack.pop();
+      const node = nodeAndBounds.node;
+      const lowerBound = nodeAndBounds.lowerBound;
+      const upperBound = nodeAndBounds.upperBound;
+      if (node.value <= lowerBound || node.value >= upperBound) {
+          return false;
+      }
+      if (node.left) {
+        nodeAndBoundsStack.push({node: node.left, lowerBound: lowerBound, upperBound: node.value});
+      }
+      if (node.right) {
+        nodeAndBoundsStack.push({node: node.right, lowerBound: node.value, upperBound: upperBound});
+      }
+    }
+    return true;
+  }
