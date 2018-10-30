@@ -54,3 +54,20 @@ class TempTracker {
         this.minTemp = temp;
     }
   }
+
+  getMax() {
+    return this.maxTemp;
+  }
+
+  getMin() {
+    return this.minTemp;
+  }
+
+  getMean() {
+    return this.mean;
+  }
+
+  getMode() {
+    return this.mode;
+  }
+}
