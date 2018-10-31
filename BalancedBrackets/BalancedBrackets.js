@@ -49,3 +49,11 @@ function balancedBrackets(str) {
     
       return stack.length === 0;
     }
+
+    //Console log tests: 
+console.log(balancedBrackets('{}[]()'));        // should print true
+console.log(balancedBrackets('{(([]))}'));      // should print true
+console.log(balancedBrackets('{ [ ] ( ) }'));   // should print true
+console.log(balancedBrackets('{ [ ( ] ) }'));   // should print false
+console.log(balancedBrackets('('));             // should print false
+console.log(balancedBrackets('{[}'));           // should print false
