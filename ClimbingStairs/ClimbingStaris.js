@@ -9,3 +9,19 @@
 // So climbStairs(3) should return 4.
 
 //WHITEBOARD YOUR APPROACH: 
+/* 
+  Naive Recursive Solution
+  Simple and intuitive, but has a runtime
+  of O(3^n) due to the three recursive calls
+  Successive calls also repeat a lot of work
+*/
+function naiveClimbStairs(n) {
+    // base case 1
+    if (n < 0) return 0;
+    // base case 2
+    else if (n == 0) return 1;
+    // move towards our base case
+    else {
+      return naiveClimbStairs(n-1) + naiveClimbStairs(n-2) + naiveClimbStairs(n-3);
+    }
+  }
