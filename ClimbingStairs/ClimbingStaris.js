@@ -25,3 +25,24 @@ function naiveClimbStairs(n) {
       return naiveClimbStairs(n-1) + naiveClimbStairs(n-2) + naiveClimbStairs(n-3);
     }
   }
+
+/* 
+  Recursive solution that utilizes memoization
+  This solution should run much faster than the naive
+  solution, since it isn't repeating work, giving it 
+  a runtime of O(n).
+  
+  Also takes O(n) additional space over the naive 
+  solution due to the added usage of the cache array
+*/
+function memoizedClimbStairs(n, cache) {
+    if (n < 0) return 0;
+    else if (n == 0) return 1;
+    else if (cache[n] > 1) return cache[n];
+    else {
+      cache[n] = memoizedClimbStairs(n-1, cache) +
+                 memoizedClimbStairs(n-2, cache) +
+                 memoizedClimbStairs(n-3, cache);
+      return cache[n];
+    }
+  }
