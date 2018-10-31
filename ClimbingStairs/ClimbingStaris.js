@@ -46,3 +46,10 @@ function memoizedClimbStairs(n, cache) {
       return cache[n];
     }
   }
+
+// Some console log tests: 
+console.log(naiveClimbStairs(10));  // should print 274
+console.log(naiveClimbStairs(30));  // should print 53798080
+
+// console.log(memoizedClimbStairs(30, Array(30)));  // should also print 53798080, though must quicker than the naive implementation
+// console.log(memoizedClimbStairs(50, Array(50)));  // should print 10562230626642
