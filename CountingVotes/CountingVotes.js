@@ -7,3 +7,18 @@
 // countVotes(votes);  // should return 'michael'
 
 //WHITEBOARD YOUR APPROACH HERE: 
+/*
+  O(n) time complexity and O(n) space complexity
+*/
+
+function countVotes(arr) {
+    const counts = {};
+    let maxVotes = 0;
+    let winner = '';
+    // Iterate over entire array
+    arr.forEach(vote => {
+      // If name doesnt exist in counts yet, add it with a value of 0
+      if (!counts[vote]) counts[vote] = 0;
+  
+      // Increment the count of the name
+      counts[vote]++;
