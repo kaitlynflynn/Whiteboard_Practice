@@ -20,3 +20,23 @@
 // Analyze the time and space complexity of your solution. Can we write a solution that performs better than linear time?
 
 // WHITEBOARD YOUR APPROACH HERE: 
+/* 
+  We'll use a binary search strategy for this one. We check
+  the halfway point in the middle of our array to see if 
+  the middle element is greater than or less than the first
+  element in our array. From there we can determine whether
+  we need to check the left half of our array, or the right
+  half. 
+  This way we're successively cutting the problem in half
+  with each iteration. Hence we achieve a runtime of O(log n).
+*/
+
+function findRotationPoint(words) {
+    const firstWord = words[0];
+  
+    let floorIndex = 0;
+    let ceilingIndex = words.length - 1;
+  
+    while (floorIndex < ceilingIndex) {
+      // guess a point halfway between floor and ceiling
+      let guessIndex = Math.floor(floorIndex + ((ceilingIndex - floorIndex) / 2));
