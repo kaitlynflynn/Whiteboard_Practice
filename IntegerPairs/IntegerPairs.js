@@ -29,3 +29,32 @@ function integerPairs(arr, k) {
       }
     });
 }
+
+/*
+  An alternative implementation that favors
+  memory efficiency over time efficiency
+  O(n log n) runtime due to the sorting
+  with O(1) space
+*/
+function integerPairs(arr, k) {
+    // sort the input array in-place
+    arr.sort((x, y) => x - y);
+    // initialize indices to track both ends of the array
+    let first = 0;
+    let last = arr.length - 1;
+  
+    while (first < last) {
+      const sum = arr[first] + arr[last];
+      // check to see if the two elements sum up to k
+      if (sum == k) {
+        console.log(arr[first], arr[last]);
+        first++;
+        last--;
+      } else {
+        // if they don't then we decide whether we increment
+        // the first index or decrement the last index
+        if (sum < k) first++;
+        else last--;
+      }
+    }
+  }
