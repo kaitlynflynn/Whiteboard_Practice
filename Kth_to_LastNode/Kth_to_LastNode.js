@@ -86,3 +86,8 @@ a.next = b;
 b.next = c;
 c.next = d;
 d.next = e;
+
+/* Some console.log tests */
+console.log(kthToLastNode(2, a));   // should print 'Dobermann'
+console.log(kthToLastNode(5, a));   // should print 'Australian Sheperd'
+console.log(kthToLastNode(3, c));   // should print 'Cairne Terrier'
