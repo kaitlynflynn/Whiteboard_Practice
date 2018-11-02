@@ -54,3 +54,24 @@ function kthToLastNode(k, head) {
   
       rightNode = rightNode.next;
     }
+
+    // starting with leftNode on the head,
+    // move leftNode and rightNode down the list,
+    // maintaining a distance of k between them,
+    // until rightNode hits the end of the list
+    while (rightNode.next) {
+      leftNode = leftNode.next;
+      rightNode = rightNode.next;
+    }
+
+    // since leftNode is k nodes behind rightNode,
+    // leftNode is now the kth to last node!
+    return leftNode.value;
+}
+
+class ListNode {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
