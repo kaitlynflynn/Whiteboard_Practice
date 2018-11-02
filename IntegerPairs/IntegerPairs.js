@@ -8,3 +8,24 @@
 // // should print '6 5', '7 4', '8 3', '9 2', '10 1'
 
 //WHITEBOARD YOUR APPROACH HERE: 
+/* 
+  A runtime-efficient implemention that
+  trades time efficiency for space efficiency
+  O(n) runtime with O(n) space
+*/
+function integerPairs(arr, k) {
+    // Use a hash to store key-value pairs of numbers
+    const hash = {};
+    // Loop through the arr
+    arr.forEach((x, i) => {
+      // check to see if the complement for the
+      // current element exists in the hash
+      if (hash[k - x]) {
+        console.log(x, k - x);
+      } else {
+        // if it doesn't, then we hash this number
+        // +1 so get around 0-indexing
+        hash[x] = i + 1;
+      }
+    });
+}
