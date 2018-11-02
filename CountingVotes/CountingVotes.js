@@ -22,3 +22,20 @@ function countVotes(arr) {
   
       // Increment the count of the name
       counts[vote]++;
+
+    // Check to see if current name has more votes then the current max
+    if (counts[vote] > maxVotes) {
+        // Sets the max votes to the current names votes if larger
+        maxVotes = counts[vote];
+
+        // Since this name has more votes, its currently the winner
+        winner = vote;
+
+        // Checks to see if current name is tied to the winner
+    } else if (counts[vote] === maxVotes) {
+        // if tied, sets the winner to the name that is greater (last alphabetically)
+        if (vote > winner) winner = vote;
+    }
+    });
+    return winner;
+  }
