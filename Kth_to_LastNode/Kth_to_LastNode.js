@@ -75,3 +75,14 @@ class ListNode {
     this.next = null;
   }
 }
+
+let a = new ListNode("Australian Sheperd");
+let b = new ListNode("Beagle");
+let c = new ListNode("Cairne Terrier");
+let d = new ListNode("Dobermann");
+let e = new ListNode("English Mastiff");
+
+a.next = b;
+b.next = c;
+c.next = d;
+d.next = e;
