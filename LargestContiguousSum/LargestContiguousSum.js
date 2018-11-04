@@ -6,4 +6,27 @@
 // console.log(largestContiguousSum(arr)); // should print 7
 
 // WHITEBOARD YOUR APPROACH HERE: 
+/*
+  We'll use a greedy algorithm to check to see if we have a 
+  new max sum as we iterate along the along. If at any time
+  our sum becomes negative, we reset the sum. 
+*/
 
+function largestContiguousSum(arr) {
+    let maxSum = 0;
+    let sum = 0;
+  
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+  
+      if (maxSum < sum) {
+        maxSum = sum;
+      } else if (sum < 0) {
+        sum = 0;
+      }
+    }
+  
+    return maxSum;
+  }
+
+  
