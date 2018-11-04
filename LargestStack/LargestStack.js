@@ -71,3 +71,22 @@ class Stack {
           this.maxValues.push(item);
         }
       }
+
+      pop() {
+        const item = this.stack.pop();
+        // check to see if the item we popped off
+        // is the current max
+        // if it is, pop off the max Stack
+        // the previous max value in the Stack 
+        // takes its place
+        if (item === this.maxValues.peek()) {
+          this.maxValues.pop();
+        }
+    
+        return item;
+      }
+    
+      getMax() {
+        return this.maxValues.peek();
+      }
+    }
