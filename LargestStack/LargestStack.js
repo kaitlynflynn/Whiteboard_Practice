@@ -30,3 +30,34 @@
 // Analyze the time and space complexity of the methods of your MaxStack class. What tradeoffs had to occur in order for you to achieve O(1) retrieval of the maximum value?
 
 // WHITEBOARD YOUR APPROACH HERE: 
+class Stack {
+    constructor() {
+      this.items = [];
+    }
+  
+    push(item) {
+      this.items.push(item);
+    }
+  
+    pop() {
+      if (this.items.length) {
+        return this.items.pop();
+      }
+      return null;
+    }
+  
+    peek() {
+      if (this.items.length) {
+        return this.items[this.items.length-1];
+      }
+      return null;
+    }
+  }
+
+  class MaxStack {
+    // We use two Stacks, one to store all the values
+    // The other to store just our max values
+    constructor() {
+      this.stack = new Stack();
+      this.maxValues = new Stack();
+    }
