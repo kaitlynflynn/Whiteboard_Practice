@@ -61,3 +61,13 @@ class Stack {
       this.stack = new Stack();
       this.maxValues = new Stack();
     }
+
+    push(item) {
+        this.stack.push(item);
+        // If the given item is larger than the
+        // latest max value, add it to the stack
+        // of max values as the new max
+        if (!this.maxValues.peek() || item >= this.maxValues.peek()) {
+          this.maxValues.push(item);
+        }
+      }
