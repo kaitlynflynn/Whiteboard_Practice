@@ -22,3 +22,11 @@ function spiralCopy(inputMatrix) {
     let bottomRow = numRows - 1;
     let leftCol = 0;
     let rightCol = numCols - 1;
+
+    const result = [];
+    // iterate throughout the entire matrix
+    while (topRow <= bottomRow && leftCol <= rightCol) {
+      // iterate along the top row from left to right
+      for (let i = leftCol; i <= rightCol; i++) {
+        result.push(inputMatrix[topRow][i]);
+      }
