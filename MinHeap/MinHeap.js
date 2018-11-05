@@ -52,3 +52,11 @@ class Heap {
     constructor() {
       this.storage = [];
     }
+
+    insert(value) {
+        // push the given value to the end of the storage array
+        const index = this.storage.push(value) - 1;
+        // use the `_bubbleUp` method to move this new value to
+        // a valid spot in the min heap
+        this._bubbleUp(index);
+      }
