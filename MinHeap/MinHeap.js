@@ -60,3 +60,9 @@ class Heap {
         // a valid spot in the min heap
         this._bubbleUp(index);
       }
+
+      delete() {
+        if (!this.storage.length) return;
+        if (this.storage.length === 1) {
+          return this.storage.pop();
+        }
