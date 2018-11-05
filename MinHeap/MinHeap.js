@@ -66,3 +66,14 @@ class Heap {
         if (this.storage.length === 1) {
           return this.storage.pop();
         }
+
+        const min = this.storage[0];
+        // overwrite the old min value at the root of 
+        // the heap with the last value in the heap
+        this.storage[0] = this.storage.pop();
+        // call `_siftDown` to move the new value at the root
+        // of the heap to a valid spot, making way for the
+        // proper root of the min heap
+        this._siftDown(0);
+        return min;
+      }
