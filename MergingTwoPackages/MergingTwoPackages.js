@@ -14,3 +14,19 @@ function getIndicesOfItemWeights(arr, limit) {
     // use an object to store item weights
     // along with their 'complement'
     const o = {};
+
+    for (let i = 0; i < arr.length; i++) {
+        const weight = arr[i];
+        // check the object to see we have the 
+        // complement of the current weight
+        const complementIndex = o[limit - weight];
+        // if we do, then we're done!
+        if (complementIndex !== undefined) {
+          return [i, complementIndex];
+        } else {
+          // otherwise, store the weight with its index
+          o[weight] = i;
+        }
+      }
+      return [];
+    }
