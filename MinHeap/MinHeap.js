@@ -77,3 +77,17 @@ class Heap {
         this._siftDown(0);
         return min;
       }
+
+      getMin() {
+        return this.storage[0];
+      }
+      // helper method that checks to see if the value at the given index
+      // is in a valid spot in the heap; if it isn't, the value will 
+      // be swapped with its parent's value until it reaches a valid spot
+      _bubbleUp(index) {
+        const parentIndex = Math.floor((index - 1) / 2);
+        if (this.storage[parentIndex] > this.storage[index]) {
+          [this.storage[parentIndex], this.storage[index]] = [this.storage[index], this.storage[parentIndex]];
+          this._bubbleUp(parentIndex);
+        }
+      }
