@@ -10,3 +10,7 @@
 //                  // weights 6 and 15 whose sum equals 21
 
 //WHITEBOARD YOUR APPROACH: 
+function getIndicesOfItemWeights(arr, limit) {
+    // use an object to store item weights
+    // along with their 'complement'
+    const o = {};
