@@ -34,3 +34,21 @@
 //    console.log(heap.getMin());   // should print 'undefined'
 
 //WHITEBOARD YOUR APPROACH: 
+/*
+  An implementation that uses a storage array as the backing
+  for the min heap. In order to emulate a binary tree structure,
+  we have the following rules:
+  1. We can calculate a parent node's left child with the
+     formula `index * 2 + 1`.
+  2. We can calculate a parent node's right child with the
+     formula `index * 2 + 2`.
+  3. Given the index of a child node, the formula to 
+     calculate the child's parent's index is
+     `Math.floor((index - 1) / 2)`.
+  Using these forumulas, we can swap the values of parent nodes 
+  that are greater then their children node's values and vice versa.
+*/
+class Heap {
+    constructor() {
+      this.storage = [];
+    }
