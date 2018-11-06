@@ -39,4 +39,20 @@ function nthFib(n) {
     
       return nthFibMemo(n);
     }
+
+    /*
+  Linear time and linear space algorithm that 
+  builds a memo from the ground up 
+*/
+function nthFibIterative(n) {
+    let memo = Array(n);
+    memo[0] = 0;
+    memo[1] = 1;
+  
+    for (let i = 2; i <= n; i++) {
+      memo[i] = memo[i-1] + memo[i-2];
+    }
+  
+    return memo[n];
+  }
   
