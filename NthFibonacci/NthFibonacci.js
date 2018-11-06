@@ -55,4 +55,15 @@ function nthFibIterative(n) {
   
     return memo[n];
   }
+
+/* Some console.log tests */
+console.log(nthFib(50));
+console.log(nthFibIterative(50));
+// Both of the above should print 12586269025
+// within a quick span of time (less than 1 second)
+
+console.log(nthFib(1000));
+console.log(nthFibIterative(1000));
+// Both of the above runs should print 4.346655768693743e+208
+// within a quick span of time (less than 1 second)
   
