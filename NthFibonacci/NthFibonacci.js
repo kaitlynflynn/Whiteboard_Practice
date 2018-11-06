@@ -13,3 +13,30 @@
 // console.log(betterNthFib(1000));  // should print 4.346655768693743e+208 in less than 1 second
 
 // WHITEBOARD YOUR APPROACH HERE: 
+/* 
+  Solution that utilizes memoization to 
+  cache prior results
+  Exhibits a worst-case runtime of O(2^n)
+  due to the unbounded recursion
+*/
+function nthFib(n) {
+    let memo = Array(n);
+  
+    function nthFibMemo(n) {
+      let v = memo[n];
+  
+      if (!v) {
+        v = recurse(n);
+        memo[n] = v;
+      }
+      return v;
+    }
+
+    function recurse(n) {
+        if (n === 0 || n === 1) return n;
+        return nthFibMemo(n-1) + nthFibMemo(n-2);
+      }
+    
+      return nthFibMemo(n);
+    }
+  
