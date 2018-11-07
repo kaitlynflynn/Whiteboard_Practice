@@ -38,3 +38,9 @@
 // The value of 60 in the left subtree is correct if we were only considering the tree rooted at 30, however, considering the entire tree, 60 should not be in the left subtee at all, since 60 is greater than the root.
 
 //WHITEBOARD YOUR APPROACH HERE: 
+
+function isBinarySearchTree(root) {
+    // start at the root, with an arbitrarily low lower bound
+    // and an arbitrarily high upper bound
+    const nodeAndBoundsStack = [];
+    nodeAndBoundsStack.push({node: root, lowerBound: -Infinity, upperBound: Infinity});
