@@ -12,3 +12,15 @@ class Queue {
     enqueue(item) {
       this.inStack.push(item);
     }
+
+    dequeue() {
+        // if the outStack is empty
+        // we need to populate it with inStack elements
+        if (this.outStack.length === 0) {
+          // empty out the inStack into the outStack
+          while (this.inStack.length > 0) {
+            this.outStack.push(this.inStack.pop());
+          }
+        }
+        return this.outStack.pop();
+      }
