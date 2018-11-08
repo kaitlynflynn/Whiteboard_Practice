@@ -88,3 +88,16 @@ class BinaryTreeNode {
       return this.right;
     }
   }
+
+/* Some console.log tests */
+const root = new BinaryTreeNode(50);
+root.insertLeft(30);
+root.left.insertLeft(20);
+root.left.insertRight(60);
+root.insertRight(80);
+root.right.insertLeft(70);
+root.right.insertRight(90);
+
+console.log(isBinarySearchTree(root.left));   // should print true
+console.log(isBinarySearchTree(root.right));  // should print true
+console.log(isBinarySearchTree(root));        // should print false
