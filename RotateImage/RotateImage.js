@@ -46,3 +46,13 @@ function rotateImage(matrix) {
   
     return matrix;
   }
+
+/*
+  A slick functional solution using `Array.map`
+  However, this is not an in-place solution since `map`
+  returns copies of the mapped array
+*/
+function functionalRotateImage(matrix) {
+    return matrix.map(m => m.reverse())[0]
+                 .map((cv, i) => matrix.map((rv, j) => matrix[j][i]));
+  }
