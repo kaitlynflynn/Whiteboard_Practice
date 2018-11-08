@@ -24,3 +24,14 @@ class Queue {
         }
         return this.outStack.pop();
       }
+
+      peek() {
+        // same logic as `dequeue`
+        if (this.outStack.length === 0) {
+          while (this.inStack.length > 0) {
+            this.outStack.push(this.inStack.pop());
+          }
+        }
+        return this.outStack[0];
+      }
+    }
