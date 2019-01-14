@@ -3,3 +3,6 @@
 // “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
 
 // SOLUTION HERE
+for (var i=1; i < 101; i++) {
+
+}
