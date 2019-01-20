@@ -7,7 +7,7 @@
 // if statements setup utilizing remainder operator (%)
 // this returns the remainder of one number divided by another
 // example: if i = 15, console will print "FizzBuzz"
-for (var i=1; i < 101; i++) {
+for (var i = 1; i <= 100; i++) {
     if (i % 15 == 0) console.log("FizzBuzz");
 
     // else if i = multiple of 3, console prints "Fizz"
@@ -20,8 +20,11 @@ for (var i=1; i < 101; i++) {
     else console.log(i);
 }
 
+// Space Time Complexity: 
+// BIG O: O(1) Constant Runtime
+
 //WITHOUT NOTES
-for (var i = 1; i < 101; i++) {
+for (var i = 1; i < 100; i++) {
     if (i % 15 == 0) console.log("FizzBuzz");
     else if (i % 3 == 0) console.log("Fizz");
     else if (i % 5 == 0) console.log("Buzz");
