@@ -113,3 +113,62 @@ class Node {
   }
   
   console.log('------------');
+
+  //------------------------------------------------------
+
+// Implement a Stack List Class
+// LIFO = last in, first out
+// push = adds item on top 
+// pop = removes item from top
+
+class Stack {
+
+    constructor() {
+      this.arr= []
+    }
+    
+      push(num) {
+        this.arr.unshift(num); //unshift = adds item to the front
+      }
+    
+      pop(){
+        this.arr.shift() //shift = removes item from the front
+      }
+    
+      getData() {
+        return this.arr;
+      }
+    
+      size() {
+        return this.arr.length;
+      }
+    
+      peek() {
+        if (this.arr.length === 0) return "empty";
+        return this.arr[0];
+      }
+    
+      getMax() {
+        let max = Number.MIN_SAFE_INTEGER;
+          for (let index = 0; index < this.arr.length; index++) {
+          if (this.arr[index] > max) max = this.arr[index]
+        }
+        return max;
+      }
+     }
+    
+    let stack = new Stack();
+    
+    stack.push(10);
+    stack.push(20);
+    console.log(stack.peek()); // 20
+    stack.push(100);
+    console.log(stack.peek()); // 100
+    console.log(stack.size()); // 3
+    console.log(stack.getData()); // [ 100, 20, 10 ]
+    console.log(stack.getMax()); // 100
+    stack.pop();
+    console.log(stack.getMax()) // 20
+    console.log(stack.getData()); // [ 20, 10 ]
+    
+    console.log('------------');
