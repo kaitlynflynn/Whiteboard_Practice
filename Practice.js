@@ -62,3 +62,54 @@ var twoSum = function(nums, target) {
   console.log(twoSum([2, 9, 1, 7], 10)); // 9 1
   console.log(twoSum([2, 11, -1, 7], 10)); // 11 -1
   console.log('------------');
+
+  //------------------------------------------------------
+
+// Implement a Linked List Class
+// Questions to ask: singly vs doubly
+
+class Node {
+    constructor(data, next, prev) {
+      this.data = data;
+      this.next = null;
+      this.prev = null;
+    }
+  
+  }
+  
+  class LinkedList {
+      constructor() {
+        this.head = null;
+      }
+  
+      add(data) {
+        const newNode = new Node(data);
+  
+        let  current;
+        if (this.head === null) {
+          this.head = newNode;
+        } else {
+          current = this.head;
+          while(current.next != null) {
+            current = current.next;
+          }
+  
+          current.next = newNode;
+        }
+      }
+  
+      getHead() { return this.head};
+  }
+  
+  let list = new LinkedList();
+  list.add(50) // 50
+  list.add(60) // 60
+  list.add(70) // 70
+  let current = list.getHead();
+  
+  while(current != null) {
+    console.log(current.data);
+    current = current.next;
+  }
+  
+  console.log('------------');
