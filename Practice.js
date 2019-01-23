@@ -43,3 +43,22 @@ function Palindrome(str) {
    console.log(Palindrome2('Pop')); // returns true
    console.log(Palindrome2('pug')); // returns false
    console.log('------------');
+
+   //------------------------------------------------------
+
+// Given an array of integers, return the first two integers that add up to 10. 
+// Ex Given Nums = [2, 3, 7, 15]
+
+var twoSum = function(nums, target) {
+  
+    for (let index = 1; index < nums.length; index++) {
+      if (nums[index-1] + nums[index] === 10) return `values: ${nums[index-1]} ${nums[index]}`
+  
+    }
+    return 'N/A'
+  };
+  
+  console.log(twoSum([2, 3, 7, 15], 10)); // 3 7
+  console.log(twoSum([2, 9, 1, 7], 10)); // 9 1
+  console.log(twoSum([2, 11, -1, 7], 10)); // 11 -1
+  console.log('------------');
