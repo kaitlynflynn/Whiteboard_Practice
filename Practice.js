@@ -49,7 +49,7 @@ function Palindrome(str) {
 // Given an array of integers, return the first two integers that add up to 10. 
 // Ex Given Nums = [2, 3, 7, 15]
 
-var twoSum = function(nums, target) {
+var twoSum = function(nums) {
   
     for (let index = 1; index < nums.length; index++) {
       if (nums[index-1] + nums[index] === 10) return `values: ${nums[index-1]} ${nums[index]}`
@@ -185,3 +185,13 @@ for (var i = 1; i <= 100; i++) {
   };
   
   // constant runtime O(1)
+
+
+  //------------------------------------------------------
+// Given an array of numbers, return the frequency of the value 2. 
+// ex: x = 2, array was [1, 1, 2, 2, 3, 4, 4, 4, 4]`:
+
+let count = 0;
+    for (let index = 0; index < arr.length; index++) {
+        if (arr[index] === x) count++;
+};
